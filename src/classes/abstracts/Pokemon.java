@@ -3,13 +3,23 @@ package classes.abstracts;
 import classes.sistema.Elemento;
 import classes.sistema.Golpe;
 
+import java.util.Arrays;
+
 public abstract class Pokemon {
     private String nome;
     private Elemento elemento;
     private int vida ;
     private int level;
     private boolean reviveu;
-    private Golpe[] golpes;
+    private Golpe[] golpes = new Golpe[4];
+
+    public Pokemon(String nome, Elemento elemento, int vida) {
+        this.nome = nome;
+        this.elemento = elemento;
+        this.vida = vida;
+        this.level = 1;
+        this.reviveu = false;
+    }
 
     public abstract int ataca(Golpe golpe);
 
@@ -69,5 +79,17 @@ public abstract class Pokemon {
 
     public void setGolpes(Golpe[] golpes) {
         this.golpes = golpes;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getName() + "{" +
+                "nome='" + nome + '\'' +
+                ", elemento=" + elemento +
+                ", vida=" + vida +
+                ", level=" + level +
+                ", reviveu=" + reviveu +
+                ", golpes=" + Arrays.toString(golpes) +
+                '}';
     }
 }

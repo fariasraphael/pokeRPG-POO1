@@ -5,6 +5,19 @@ public class Elemento {
     private Elemento fraqueza;
     private Elemento vantagem;
 
+    public Elemento(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Elemento{" +
+                "nome='" + nome + '\'' +
+                ", fraqueza=" + fraqueza.nome +
+                ", vantagem=" + vantagem.nome +
+                '}';
+    }
+
     public String getNome() {
         return nome;
     }

@@ -15,7 +15,7 @@ public class Charmander extends Pokemon {
           StaticsGolpe.getGOLPE("growl"),
           StaticsGolpe.getGOLPE("fireFang"),
           StaticsGolpe.getGOLPE("ember"),
-          StaticsGolpe.getGOLPE("growl"),
+          StaticsGolpe.getGOLPE("flameThrower"),
         };
         super.setGolpes(golpes);
         System.out.printf("Criando um novo %s\n", this);

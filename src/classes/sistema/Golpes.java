@@ -9,6 +9,7 @@ public class Golpes {
         Golpe growl = new Golpe();
         Golpe fireFang = new Golpe();
         Golpe ember = new Golpe();
+        Golpe flameThrower = new Golpe();
 
         growl.setNome("growl");
         growl.setDano(50 + new Random().nextInt(50));
@@ -28,11 +29,18 @@ public class Golpes {
         ember.setUsos(0);
         ember.setMaxUsos(3);
 
+        flameThrower.setNome("flameThrower");
+        flameThrower.setDano(150 + new Random().nextInt(150));
+        flameThrower.setTipo(Statics.getELEMENTO("fogo"));
+        flameThrower.setUsos(0);
+        flameThrower.setMaxUsos(3);
+
 
 
         StaticsGolpe.setGOLPE("growl", growl);
         StaticsGolpe.setGOLPE("fireFang", fireFang);
         StaticsGolpe.setGOLPE("ember", ember);
+        StaticsGolpe.setGOLPE("flameThrower", flameThrower);
 
     }
 }

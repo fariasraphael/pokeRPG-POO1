@@ -9,8 +9,8 @@ public class Charizard extends Charmeleon {
 
     public Charizard(String nome) {
         super(nome);
-        //super.setVida(super.getVidaMaxima() + 200);//(new Random().nextInt(300) + 200));
-        System.out.printf("Criando um novo %s\n", this);
+        this.setLevel(3);
+        //System.out.printf("Criando um novo %s\n", this);
     }
 
     @Override

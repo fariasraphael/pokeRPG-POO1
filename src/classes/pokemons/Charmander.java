@@ -24,12 +24,12 @@ public class Charmander extends Pokemon {
     @Override
     public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
         if (golpe.getTipo().getVantagem() == pokemonInimigo.getElemento()) {
-            return (int) (golpe.getDano() * 1.2);
+            return (int) (golpe.getDano() * 1.2 * (this.getLevel()/10 + 1 ));
         } else if (golpe.getTipo().getFraqueza() == pokemonInimigo.getElemento()) {
-            return (int) (golpe.getDano() * 0.7);
+            return (int) (golpe.getDano() * 0.7 * (this.getLevel()/10 + 1 ));
         }
 
-        return golpe.getDano();
+        return ((int) golpe.getDano() * (this.getLevel()/10 + 1 ));
     }
 
     @Override

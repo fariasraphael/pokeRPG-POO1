@@ -14,7 +14,12 @@ public class Bulbassaur extends Pokemon {
     }
 
     @Override
-    public int ataca(Golpe golpe) {
+    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
         return 0;
+    }
+
+    @Override
+    public Pokemon evolui() {
+        return null;
     }
 }

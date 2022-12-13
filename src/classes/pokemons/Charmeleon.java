@@ -13,8 +13,9 @@ public class Charmeleon extends Charmander {
     public Charmeleon(String nome) {
         super(nome);
         super.setVida(super.getVida() + (new Random().nextInt(200) + 100));
-        super.setGolpes(upgradeGolpes());
-        System.out.printf("Criando um novo %s\n", this);
+        //super.setGolpes(upgradeGolpes());
+        this.setLevel(2);
+//        System.out.printf("Criando um novo %s\n", this);
     }
 
     private Golpe[] upgradeGolpes(){
@@ -33,5 +34,8 @@ public class Charmeleon extends Charmander {
         return golpes;
     }
 
-
+    @Override
+    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
+        return super.ataca(golpe, pokemonInimigo);
+    }
 }

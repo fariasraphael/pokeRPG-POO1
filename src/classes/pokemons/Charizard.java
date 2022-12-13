@@ -1,5 +1,6 @@
 package classes.pokemons;
 
+import classes.abstracts.Pokemon;
 import classes.sistema.Golpe;
 
 import java.util.Random;
@@ -13,7 +14,7 @@ public class Charizard extends Charmeleon {
     }
 
     @Override
-    public int ataca(Golpe golpe) {
+    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
         return 0;
     }
 }

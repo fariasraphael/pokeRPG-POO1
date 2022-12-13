@@ -18,9 +18,10 @@ public class Charmander extends Pokemon {
           StaticsGolpe.getGOLPE("flameThrower"),
         };
         super.setGolpes(golpes);
-        System.out.printf("Criando um novo %s\n", this);
+//        System.out.printf("Criando um novo %s\n", this);
     }
 
+    @Override
     public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
         if (golpe.getTipo().getVantagem() == pokemonInimigo.getElemento()) {
             return (int) (golpe.getDano() * 1.2);
@@ -32,7 +33,13 @@ public class Charmander extends Pokemon {
     }
 
     @Override
-    public int ataca(Golpe golpe) {
-        return golpe.getDano();
+    public Charmeleon evolui() {
+        Charmeleon charmeleon = new Charmeleon(this.getNome());
+        charmeleon.setGolpes(this.getGolpes());
+        charmeleon.setVida(this.getVida() + (new Random().nextInt(200) + 100));
+        charmeleon.setReviveu(false);
+
+        return charmeleon;
     }
+
 }

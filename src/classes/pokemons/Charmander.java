@@ -36,7 +36,8 @@ public class Charmander extends Pokemon {
     public Charmeleon evolui() {
         Charmeleon charmeleon = new Charmeleon(this.getNome());
         charmeleon.setGolpes(this.getGolpes());
-        charmeleon.setVida(this.getVida() + (new Random().nextInt(200) + 100));
+        charmeleon.setVida(super.getVidaMaxima() + (new Random().nextInt(200) + 300));
+        charmeleon.setVidaMaxima(charmeleon.getVida());
         charmeleon.setReviveu(false);
 
         return charmeleon;

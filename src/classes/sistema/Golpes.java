@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Golpes {
 
-    public void inicializaGolpes(){
+    public static void inicializaGolpes(){
         //golpes pokemon do tipo Fogo
         Golpe growl = new Golpe();
         Golpe fireFang = new Golpe();

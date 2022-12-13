@@ -9,8 +9,6 @@ public class Charmeleon extends Charmander {
 
     public Charmeleon(String nome) {
         super(nome);
-        //super.setVida(super.getVidaMaxima() + 100);//(new Random().nextInt(200) + 100));
-        //super.setGolpes(upgradeGolpes());
         this.setLevel(2);
 //        System.out.printf("Criando um novo %s\n", this);
     }

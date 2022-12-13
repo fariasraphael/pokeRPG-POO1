@@ -8,7 +8,8 @@ import java.util.Arrays;
 public abstract class Pokemon {
     private String nome;
     private Elemento elemento;
-    private int vida ;
+    private int vida;
+    private int vidaMaxima;
     private int level;
     private boolean reviveu;
     private Golpe[] golpes = new Golpe[4];
@@ -17,11 +18,14 @@ public abstract class Pokemon {
         this.nome = nome;
         this.elemento = elemento;
         this.vida = vida;
+        this.vidaMaxima = vida;
         this.level = 1;
         this.reviveu = false;
     }
 
-    public abstract int ataca(Golpe golpe);
+    public abstract int ataca(Golpe golpe, Pokemon pokemonInimigo);
+
+    public abstract Pokemon evolui();
 
     public void descansa() {
         for (int i = 0; i < golpes.length; i++) {
@@ -55,6 +59,14 @@ public abstract class Pokemon {
 
     public void setVida(int vida) {
         this.vida = vida;
+    }
+
+    public int getVidaMaxima() {
+        return vidaMaxima;
+    }
+
+    public void setVidaMaxima(int vidaMaxima) {
+        this.vidaMaxima = vidaMaxima;
     }
 
     public int getLevel() {

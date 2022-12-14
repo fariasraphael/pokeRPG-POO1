@@ -40,7 +40,6 @@ public class Golpes {
         StaticsGolpe.setGOLPE("ember", ember);
         StaticsGolpe.setGOLPE("flameThrower", flameThrower);
 
-
         //golpes pokemon do tipo Grama
         Golpe razorLeaf = new Golpe();
         Golpe vineWhip = new Golpe();
@@ -75,6 +74,41 @@ public class Golpes {
         StaticsGolpe.setGOLPE("vineWhip", vineWhip);
         StaticsGolpe.setGOLPE("whirlwind", whirlwind);
         StaticsGolpe.setGOLPE("petalDance", petalDance);
+
+        //golpes pokemon do tipo Agua
+        Golpe bubble = new Golpe();
+        Golpe bubbleBeam = new Golpe();
+        Golpe waterGun = new Golpe();
+        Golpe iceBeam = new Golpe();
+
+        bubble.setNome("bubble");
+        bubble.setDano(50 + new Random().nextInt(50));
+        bubble.setTipo(Statics.getELEMENTO("agua"));
+        bubble.setMaxUsos(2 + new Random().nextInt(4));
+        bubble.setUsos(bubble.getMaxUsos());
+
+        bubbleBeam.setNome("bubbleBeam");
+        bubbleBeam.setDano(50 + new Random().nextInt(100));
+        bubbleBeam.setTipo(Statics.getELEMENTO("agua"));
+        bubbleBeam.setMaxUsos(2 + new Random().nextInt(3));
+        bubbleBeam.setUsos(bubbleBeam.getMaxUsos());
+
+        waterGun.setNome("waterGun");
+        waterGun.setDano(100 + new Random().nextInt(100));
+        waterGun.setTipo(Statics.getELEMENTO("agua"));
+        waterGun.setMaxUsos(1 + new Random().nextInt(4));
+        waterGun.setUsos(waterGun.getMaxUsos());
+
+        iceBeam.setNome("iceBeam");
+        iceBeam.setDano(150 + new Random().nextInt(150));
+        iceBeam.setTipo(Statics.getELEMENTO("agua"));
+        iceBeam.setMaxUsos(1 + new Random().nextInt(2));
+        iceBeam.setUsos(iceBeam.getMaxUsos());
+
+        StaticsGolpe.setGOLPE("bubble", bubble);
+        StaticsGolpe.setGOLPE("bubbleBeam", bubbleBeam);
+        StaticsGolpe.setGOLPE("waterGun", waterGun);
+        StaticsGolpe.setGOLPE("iceBeam", iceBeam);
 
     }
 }

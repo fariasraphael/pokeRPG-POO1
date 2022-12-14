@@ -110,5 +110,40 @@ public class Golpes {
         StaticsGolpe.setGOLPE("waterGun", waterGun);
         StaticsGolpe.setGOLPE("iceBeam", iceBeam);
 
+        //golpes pokemon do tipo Normal
+        Golpe hyperFang = new Golpe();
+        Golpe tackle = new Golpe();
+        Golpe bite = new Golpe();
+        Golpe thunderbolt = new Golpe();
+
+        hyperFang.setNome("hyperFang");
+        hyperFang.setDano(50 + new Random().nextInt(50));
+        hyperFang.setTipo(Statics.getELEMENTO("normal"));
+        hyperFang.setMaxUsos(2 + new Random().nextInt(4));
+        hyperFang.setUsos(hyperFang.getMaxUsos());
+
+        tackle.setNome("tackle");
+        tackle.setDano(50 + new Random().nextInt(100));
+        tackle.setTipo(Statics.getELEMENTO("normal"));
+        tackle.setMaxUsos(2 + new Random().nextInt(3));
+        tackle.setUsos(tackle.getMaxUsos());
+
+        bite.setNome("bite");
+        bite.setDano(100 + new Random().nextInt(100));
+        bite.setTipo(Statics.getELEMENTO("normal"));
+        bite.setMaxUsos(1 + new Random().nextInt(4));
+        bite.setUsos(bite.getMaxUsos());
+
+        thunderbolt.setNome("thunderbolt");
+        thunderbolt.setDano(150 + new Random().nextInt(150));
+        thunderbolt.setTipo(Statics.getELEMENTO("normal"));
+        thunderbolt.setMaxUsos(1 + new Random().nextInt(2));
+        thunderbolt.setUsos(thunderbolt.getMaxUsos());
+
+        StaticsGolpe.setGOLPE("hyperFang", hyperFang);
+        StaticsGolpe.setGOLPE("tackle", tackle);
+        StaticsGolpe.setGOLPE("bite", bite);
+        StaticsGolpe.setGOLPE("thunderbolt", thunderbolt);
+
     }
 }

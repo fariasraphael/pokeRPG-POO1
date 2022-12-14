@@ -20,6 +20,7 @@ public class Main {
         Elemento fogo = new Elemento("fogo");
         Elemento agua = new Elemento("agua");
         Elemento grama = new Elemento("grama");
+        Elemento normal = new Elemento("normal");
 
         // configurando vantagens e fraquezas
         fogo.setFraqueza(agua);
@@ -31,9 +32,13 @@ public class Main {
         grama.setFraqueza(fogo);
         grama.setVantagem(agua);
 
+        normal.setFraqueza(null);
+        normal.setVantagem(null);
+
         // salvando elementos no statics
         Statics.setELEMENTO("fogo", fogo);
         Statics.setELEMENTO("agua", agua);
         Statics.setELEMENTO("grama", grama);
+        Statics.setELEMENTO("normal", normal);
     }
 }

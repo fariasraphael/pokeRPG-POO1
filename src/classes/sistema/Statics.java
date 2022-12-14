@@ -14,3 +14,4 @@ public class Statics {
         ELEMENTOS.put(key, elemento);
     }
 }
+

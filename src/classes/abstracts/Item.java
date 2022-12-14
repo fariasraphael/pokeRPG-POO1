@@ -1,7 +1,5 @@
 package classes.abstracts;
 
 public abstract class Item {
-    public void usarItem (Pokemon pokemon){
-
-    }
+    public abstract Object usarItem (Pokemon pokemon);
 }

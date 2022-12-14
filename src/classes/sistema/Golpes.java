@@ -94,5 +94,68 @@ public class Golpes {
         StaticsGolpe.setGOLPE("leafBlade", leafBlade);
         StaticsGolpe.setGOLPE("tackle", tackle);
         StaticsGolpe.setGOLPE("solarBeam", solarBeam);
+
+
+        //golpes pokemon do tipo Água
+
+        Golpe clamp = new Golpe();
+        Golpe crabhammer = new Golpe();
+        Golpe waterfall = new Golpe();
+        Golpe dive = new Golpe();
+        Golpe FishiousRend = new Golpe();
+        Golpe FlipTurn = new Golpe();
+        Golpe MaxGeyser = new Golpe();
+
+
+        clamp.setNome("clamp");
+        clamp.setDano(50 + new Random().nextInt(50));
+        clamp.setTipo(Statics.getELEMENTO("agua"));
+        clamp.setUsos(5);
+        clamp.setMaxUsos(5);
+
+        crabhammer.setNome("crabhammer");
+        crabhammer.setDano(50 + new Random().nextInt(50));
+        crabhammer.setTipo(Statics.getELEMENTO("agua"));
+        crabhammer.setUsos(5);
+        crabhammer.setMaxUsos(5);
+
+        waterfall.setNome("waterfall");
+        waterfall.setDano(50 + new Random().nextInt(50));
+        waterfall.setTipo(Statics.getELEMENTO("agua"));
+        waterfall.setUsos(5);
+        waterfall.setMaxUsos(5);
+
+        dive.setNome("dive");
+        dive.setDano(50 + new Random().nextInt(50));
+        dive.setTipo(Statics.getELEMENTO("agua"));
+        dive.setUsos(5);
+        dive.setMaxUsos(5);
+
+        FishiousRend.setNome("FishiousRend");
+        FishiousRend.setDano(50 + new Random().nextInt(50));
+        FishiousRend.setTipo(Statics.getELEMENTO("agua"));
+        FishiousRend.setUsos(5);
+        FishiousRend.setMaxUsos(5);
+
+        FlipTurn.setNome("FlipTurn");
+        FlipTurn.setDano(50 + new Random().nextInt(50));
+        FlipTurn.setTipo(Statics.getELEMENTO("agua"));
+        FlipTurn.setUsos(5);
+        FlipTurn.setMaxUsos(5);
+
+        MaxGeyser.setNome("MaxGeyser");
+        MaxGeyser.setDano(50 + new Random().nextInt(50));
+        MaxGeyser.setTipo(Statics.getELEMENTO("agua"));
+        MaxGeyser.setUsos(5);
+        MaxGeyser.setMaxUsos(5);
+
+        StaticsGolpe.setGOLPE("clamp", clamp);
+        StaticsGolpe.setGOLPE("crabhammer", crabhammer);
+        StaticsGolpe.setGOLPE("waterfall", waterfall);
+        StaticsGolpe.setGOLPE("dive", dive);
+        StaticsGolpe.setGOLPE("FishiousRend", clamp);
+        StaticsGolpe.setGOLPE("FlipTurn", clamp);
+        StaticsGolpe.setGOLPE("MaxGeyser", clamp);
+
     }
 }

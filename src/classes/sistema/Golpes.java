@@ -49,6 +49,8 @@ public class Golpes {
         Golpe vineWhip = new Golpe();
         Golpe bulletSeed = new Golpe();
         Golpe leafBlade = new Golpe();
+        Golpe tackle = new Golpe();
+        Golpe solarBeam = new Golpe();
 
         razorLeaf.setNome("razorLeaf");
         razorLeaf.setDano(50 + new Random().nextInt(50));
@@ -74,9 +76,23 @@ public class Golpes {
         leafBlade.setUsos(5);
         leafBlade.setMaxUsos(5);
 
+        tackle.setNome("tackle");
+        tackle.setDano(50 + new Random().nextInt(50));
+        tackle.setTipo(Statics.getELEMENTO("grama"));
+        tackle.setUsos(5);
+        tackle.setMaxUsos(5);
+
+        solarBeam.setNome("solarBeam");
+        solarBeam.setDano(50 + new Random().nextInt(50));
+        solarBeam.setTipo(Statics.getELEMENTO("grama"));
+        solarBeam.setUsos(5);
+        solarBeam.setMaxUsos(5);
+
         StaticsGolpe.setGOLPE("razorLeaf", razorLeaf);
         StaticsGolpe.setGOLPE("vineWhip", vineWhip);
         StaticsGolpe.setGOLPE("bulletSeed", bulletSeed);
         StaticsGolpe.setGOLPE("leafBlade", leafBlade);
+        StaticsGolpe.setGOLPE("tackle", tackle);
+        StaticsGolpe.setGOLPE("solarBeam", solarBeam);
     }
 }

@@ -153,9 +153,9 @@ public class Golpes {
         StaticsGolpe.setGOLPE("crabhammer", crabhammer);
         StaticsGolpe.setGOLPE("waterfall", waterfall);
         StaticsGolpe.setGOLPE("dive", dive);
-        StaticsGolpe.setGOLPE("FishiousRend", clamp);
-        StaticsGolpe.setGOLPE("FlipTurn", clamp);
-        StaticsGolpe.setGOLPE("MaxGeyser", clamp);
+        StaticsGolpe.setGOLPE("FishiousRend", FishiousRend);
+        StaticsGolpe.setGOLPE("FlipTurn", FlipTurn);
+        StaticsGolpe.setGOLPE("MaxGeyser", MaxGeyser);
 
     }
 }

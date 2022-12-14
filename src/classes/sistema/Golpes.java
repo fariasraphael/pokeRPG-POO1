@@ -40,11 +40,13 @@ public class Golpes {
         StaticsGolpe.setGOLPE("ember", ember);
         StaticsGolpe.setGOLPE("flameThrower", flameThrower);
 
+
         //golpes pokemon do tipo Grama
+
         Golpe razorLeaf = new Golpe();
         Golpe vineWhip = new Golpe();
-        Golpe whirlwind = new Golpe();
-        Golpe petalDance = new Golpe();
+        Golpe bulletSeed = new Golpe();
+        Golpe leafBlade = new Golpe();
 
         razorLeaf.setNome("razorLeaf");
         razorLeaf.setDano(50 + new Random().nextInt(50));
@@ -53,27 +55,27 @@ public class Golpes {
         razorLeaf.setUsos(razorLeaf.getMaxUsos());
 
         vineWhip.setNome("vineWhip");
-        vineWhip.setDano(50 + new Random().nextInt(100));
+        vineWhip.setDano(50 + new Random().nextInt(50));
         vineWhip.setTipo(Statics.getELEMENTO("grama"));
         vineWhip.setMaxUsos(2 + new Random().nextInt(3));
         vineWhip.setUsos(vineWhip.getMaxUsos());
 
-        whirlwind.setNome("whirlwind");
-        whirlwind.setDano(100 + new Random().nextInt(100));
-        whirlwind.setTipo(Statics.getELEMENTO("grama"));
-        whirlwind.setMaxUsos(1 + new Random().nextInt(4));
-        whirlwind.setUsos(whirlwind.getMaxUsos());
+        bulletSeed.setNome("bulletSeed");
+        bulletSeed.setDano(50 + new Random().nextInt(50));
+        bulletSeed.setTipo(Statics.getELEMENTO("grama"));
+        bulletSeed.setMaxUsos(1 + new Random().nextInt(4));
+        bulletSeed.setUsos(bulletSeed.getMaxUsos());
 
-        petalDance.setNome("petalDance");
-        petalDance.setDano(150 + new Random().nextInt(150));
-        petalDance.setTipo(Statics.getELEMENTO("grama"));
-        petalDance.setMaxUsos(1 + new Random().nextInt(2));
-        petalDance.setUsos(petalDance.getMaxUsos());
+        leafBlade.setNome("leafBlade");
+        leafBlade.setDano(50 + new Random().nextInt(50));
+        leafBlade.setTipo(Statics.getELEMENTO("grama"));
+        leafBlade.setMaxUsos(1 + new Random().nextInt(2));
+        leafBlade.setUsos(leafBlade.getMaxUsos());
 
         StaticsGolpe.setGOLPE("razorLeaf", razorLeaf);
         StaticsGolpe.setGOLPE("vineWhip", vineWhip);
-        StaticsGolpe.setGOLPE("whirlwind", whirlwind);
-        StaticsGolpe.setGOLPE("petalDance", petalDance);
+        StaticsGolpe.setGOLPE("bulletSeed", bulletSeed);
+        StaticsGolpe.setGOLPE("leafBlade", leafBlade);
 
         //golpes pokemon do tipo Agua
         Golpe bubble = new Golpe();

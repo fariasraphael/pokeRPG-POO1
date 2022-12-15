@@ -3,7 +3,6 @@ package classes.pokemons;
 import classes.abstracts.Pokemon;
 import classes.sistema.Golpe;
 import classes.sistema.Statics;
-import classes.sistema.StaticsGolpe;
 
 import java.util.Random;
 
@@ -12,10 +11,10 @@ public class Chikorita extends Pokemon {
     public Chikorita(String nome) {
         super(nome, Statics.getELEMENTO("grama"), (700 + (new Random().nextInt(300))));
         Golpe[] golpes = {
-                StaticsGolpe.getGOLPE("tackle"),
-                StaticsGolpe.getGOLPE("solarBeam"),
-                StaticsGolpe.getGOLPE("vineWhip"),
-                StaticsGolpe.getGOLPE("leafBlade"),
+                Statics.getGOLPE("tackle"),
+                Statics.getGOLPE("solarBeam"),
+                Statics.getGOLPE("vineWhip"),
+                Statics.getGOLPE("leafBlade"),
         };
         super.setGolpes(golpes);
 //

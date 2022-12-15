@@ -1,7 +1,7 @@
 package classes.pokemons;
 
 import classes.sistema.Golpe;
-import classes.sistema.StaticsGolpe;
+import classes.sistema.Statics;
 
 import java.util.Random;
 
@@ -15,10 +15,10 @@ public class Bayleef extends Chikorita {
 
     private Golpe[] upgradeGolpes(){
         Golpe[] golpes = {
-                StaticsGolpe.getGOLPE("growl"),
-                StaticsGolpe.getGOLPE("fireFang"),
-                StaticsGolpe.getGOLPE("ember"),
-                StaticsGolpe.getGOLPE("flameThrower"),
+                Statics.getGOLPE("growl"),
+                Statics.getGOLPE("fireFang"),
+                Statics.getGOLPE("ember"),
+                Statics.getGOLPE("flameThrower"),
         };
 
         golpes[0].setDano(100 + new Random().nextInt(70));

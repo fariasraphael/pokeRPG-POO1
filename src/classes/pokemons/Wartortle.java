@@ -1,7 +1,7 @@
 package classes.pokemons;
 
 import classes.sistema.Golpe;
-import classes.sistema.StaticsGolpe;
+import classes.sistema.Statics;
 
 import java.util.Random;
 
@@ -15,10 +15,10 @@ public class Wartortle extends Squirtle {
 
     private Golpe[] upgradeGolpes(){
         Golpe[] golpes = {
-                StaticsGolpe.getGOLPE("clamp"),
-                StaticsGolpe.getGOLPE("crabhammer"),
-                StaticsGolpe.getGOLPE("waterfall"),
-                StaticsGolpe.getGOLPE("dive"),
+                Statics.getGOLPE("clamp"),
+                Statics.getGOLPE("crabhammer"),
+                Statics.getGOLPE("waterfall"),
+                Statics.getGOLPE("dive"),
         };
 
         golpes[0].setDano(100 + new Random().nextInt(70));

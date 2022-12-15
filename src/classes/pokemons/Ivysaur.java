@@ -1,7 +1,7 @@
 package classes.pokemons;
 
 import classes.sistema.Golpe;
-import classes.sistema.StaticsGolpe;
+import classes.sistema.Statics;
 
 import java.util.Random;
 
@@ -14,10 +14,10 @@ public class Ivysaur extends Bulbassaur{
 
     private Golpe[] upgradeGolpes(){
         Golpe[] golpes = {
-                StaticsGolpe.getGOLPE("razorLeaf"),
-                StaticsGolpe.getGOLPE("vineWhip"),
-                StaticsGolpe.getGOLPE("bulletSeed"),
-                StaticsGolpe.getGOLPE("leafBlade"),
+                Statics.getGOLPE("razorLeaf"),
+                Statics.getGOLPE("vineWhip"),
+                Statics.getGOLPE("bulletSeed"),
+                Statics.getGOLPE("leafBlade"),
         };
 
         golpes[0].setDano(100 + new Random().nextInt(70));

@@ -7,6 +7,10 @@ public class PedraDeEvolucao extends Item {
 
     @Override
     public Pokemon usarItem(Pokemon pokemon) {
-        return pokemon.evolui();
+        Pokemon evolucao = pokemon.evolui();
+        if (evolucao != null) {
+            return evolucao;
+        }
+        throw new Error ("Seu pokemon já está na sua evolução máxima");
     }
 }

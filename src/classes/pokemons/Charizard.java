@@ -16,7 +16,7 @@ public class Charizard extends Charmeleon {
 
     @Override
     public Charizard evolui() {
-        return this;
+        return null;
     }
 }
 

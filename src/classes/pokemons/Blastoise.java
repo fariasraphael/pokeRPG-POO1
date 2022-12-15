@@ -17,6 +17,6 @@ public class Blastoise extends Wartortle {
 
     @Override
     public Blastoise evolui() {
-        return this;
+        return null;
     }
 }

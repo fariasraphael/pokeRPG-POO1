@@ -13,10 +13,6 @@ public class Meganium extends Bayleef {
         //System.out.printf("Criando um novo %s\n", this);
     }
 
-    @Override
-    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
-        return 0;
-    }
 
     @Override
     public Meganium evolui() {

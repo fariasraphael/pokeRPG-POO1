@@ -22,17 +22,6 @@ public class Squirtle extends Pokemon {
     }
 
     @Override
-    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
-        if (golpe.getTipo().getVantagem() == pokemonInimigo.getElemento()) {
-            return (int) (golpe.getDano() * 1.2 * (this.getLevel() / 10 + 1));
-        } else if (golpe.getTipo().getFraqueza() == pokemonInimigo.getElemento()) {
-            return (int) (golpe.getDano() * 0.7 * (this.getLevel() / 10 + 1));
-        }
-
-        return ((int) golpe.getDano() * (this.getLevel() / 10 + 1));
-    }
-
-    @Override
     public Wartortle evolui() {
         Wartortle wartortle = new Wartortle(this.getNome());
         wartortle.setGolpes(this.getGolpes());

@@ -23,7 +23,15 @@ public abstract class Pokemon {
         this.reviveu = false;
     }
 
-    public abstract int ataca(Golpe golpe, Pokemon pokemonInimigo);
+    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
+        if (golpe.getTipo().getVantagem() == pokemonInimigo.getElemento()) {
+            return (int) (golpe.getDano() * 1.2 * (this.getLevel()/10 + 1 ));
+        } else if (golpe.getTipo().getFraqueza() == pokemonInimigo.getElemento()) {
+            return (int) (golpe.getDano() * 0.7 * (this.getLevel()/10 + 1 ));
+        }
+
+        return ((int) golpe.getDano() * (this.getLevel()/10 + 1 ));
+    }
 
     public abstract Pokemon evolui();
 

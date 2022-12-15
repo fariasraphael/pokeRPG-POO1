@@ -10,11 +10,6 @@ public class Venusaur extends Ivysaur{
     }
 
     @Override
-    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
-        return 0;
-    }
-
-    @Override
     public Venusaur evolui() {
         return this;
     }

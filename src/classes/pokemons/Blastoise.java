@@ -13,10 +13,7 @@ public class Blastoise extends Wartortle {
         //System.out.printf("Criando um novo %s\n", this);
     }
 
-    @Override
-    public int ataca(Golpe golpe, Pokemon pokemonInimigo) {
-        return 0;
-    }
+
 
     @Override
     public Blastoise evolui() {

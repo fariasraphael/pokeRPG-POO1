@@ -10,15 +10,10 @@ public abstract class Treinador {
     private List<Pokemon> pokemons = new ArrayList<>();
     private List<Item> itens = new ArrayList<>();
 
-    public void escolherPokemon (Pokemon pokemon){
+    public abstract void escolherPokemon (Pokemon pokemon);
+    public abstract void escolherItem (Item item);
+    public abstract void escolherGolpe(int indexPokemonAtual);
 
-    }
-    public void escolherItem (Item item){
-
-    }
-    public void escolherGolpe(Golpe golpe) {
-
-    }
     public String getName() {
         return name;
     }

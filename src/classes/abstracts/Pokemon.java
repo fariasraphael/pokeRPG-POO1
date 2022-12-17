@@ -103,7 +103,7 @@ public abstract class Pokemon {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + "{" +
+        return this.getClass().getSimpleName() + "{" +
                 "nome='" + nome + '\'' +
                 ", elemento=" + elemento +
                 ", vida=" + vida +

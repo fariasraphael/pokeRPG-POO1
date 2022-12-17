@@ -2,6 +2,7 @@ package classes.abstracts;
 
 import classes.sistema.Golpe;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +11,33 @@ public abstract class Treinador {
     private List<Pokemon> pokemons = new ArrayList<>();
     private List<Item> itens = new ArrayList<>();
 
-    public abstract void escolherPokemon (Pokemon pokemon);
-    public abstract void escolherItem (Item item);
-    public abstract void escolherGolpe(int indexPokemonAtual);
+    public abstract Pokemon escolherPokemon ();
+    protected abstract void escolherItem ();
+    protected abstract int escolherGolpe(int indexPokemonAtual, Pokemon pokemonInimigo);
+    protected void descansar(int indexPokemonAtual) {
+        this.getPokemons().get(indexPokemonAtual).descansa();
+    }
+
+    public abstract void escolherAcao(int indexPokemonAtual, Pokemon pokemonInimigo);
+
+    protected void realizaAcao(int indexAcao, int indexPokemonAtual, Pokemon pokemonInimigo) throws IOException {
+        switch (indexAcao) {
+            case 0:
+                escolherPokemon();
+                break;
+            case 1:
+                escolherItem();
+                break;
+            case 2:
+                System.out.println("Dano causado: " + escolherGolpe(indexPokemonAtual, pokemonInimigo));
+                break;
+            case 3:
+                descansar(indexPokemonAtual);
+                break;
+            default:
+                throw new IOException("Ação " + indexAcao + " selecionada inválida.");
+        }
+    }
 
     public String getName() {
         return name;

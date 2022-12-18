@@ -1,16 +1,15 @@
 import classes.abstracts.Pokemon;
+import classes.abstracts.Treinador;
+import classes.pokemons.Bayleef;
 import classes.pokemons.Charmander;
+import classes.sistema.Jogador;
 import classes.sistema.Statics;
 
 public class Main {
     public static void main(String[] args) {
         Statics.inicializaStatics();
 
-        Pokemon jefferson = new Charmander("Jefferson");
-        System.out.printf("Pokemon criado %s\n", jefferson);
-        Pokemon jeffao = jefferson.evolui();
-        System.out.printf("%s evolui para %s\n", jefferson, jeffao);
-
+        Treinador jogador = new Jogador();
     }
 
 }

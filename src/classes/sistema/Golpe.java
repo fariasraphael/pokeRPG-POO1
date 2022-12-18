@@ -46,4 +46,15 @@ public class Golpe {
     public void setTipo(Elemento tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        return "Golpe{" +
+                "nome='" + nome + '\'' +
+                ", dano=" + dano +
+                ", maxUsos=" + maxUsos +
+                ", usos=" + usos +
+                ", tipo=" + tipo +
+                '}';
+    }
 }

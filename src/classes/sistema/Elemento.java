@@ -13,8 +13,8 @@ public class Elemento {
     public String toString() {
         return "Elemento{" +
                 "nome='" + nome + '\'' +
-                ", fraqueza=" + fraqueza.nome +
-                ", vantagem=" + vantagem.nome +
+                ", fraqueza=" + (fraqueza != null ? fraqueza.nome : "nenhum") +
+                ", vantagem=" + (vantagem != null ? vantagem.nome : "nenhum") +
                 '}';
     }
 

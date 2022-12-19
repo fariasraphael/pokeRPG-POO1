@@ -19,7 +19,7 @@ public class Batalha {
         Treinador npc1 = new NPC("Leon");
         npc1.getPokemons().add(new Chikorita("chikorita"));
         npc1.getPokemons().add(new Krabby("krabby"));
-        npc1.getPokemons().add(new Chikorita("chikorita"));
+        npc1.getPokemons().add(new Charmander("charmander"));
         npcList.add(npc1);
 
         Treinador npc2 = new NPC("Cynthia");

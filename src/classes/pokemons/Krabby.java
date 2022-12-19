@@ -11,10 +11,10 @@ public class Krabby extends Pokemon {
     public Krabby(String nome) {
         super(nome, Statics.getELEMENTO("agua"), (700 + (new Random().nextInt(300))));
         Golpe[] golpes = {
-                Statics.getGOLPE("clamp"),
-                Statics.getGOLPE("crabhammer"),
-                Statics.getGOLPE("waterfall"),
-                Statics.getGOLPE("dive"),
+                Statics.getGOLPE("bubble"),
+                Statics.getGOLPE("bubbleBeam"),
+                Statics.getGOLPE("waterGun"),
+                Statics.getGOLPE("iceBeam"),
         };
         super.setGolpes(golpes);
 //

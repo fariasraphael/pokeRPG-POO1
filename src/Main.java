@@ -2,14 +2,24 @@ import classes.abstracts.Pokemon;
 import classes.abstracts.Treinador;
 import classes.pokemons.Bayleef;
 import classes.pokemons.Charmander;
+import classes.pokemons.Chikorita;
+import classes.sistema.Batalha;
 import classes.sistema.Jogador;
+import classes.sistema.NPC;
 import classes.sistema.Statics;
 
 public class Main {
     public static void main(String[] args) {
         Statics.inicializaStatics();
+        Batalha batalha = new Batalha();
 
         Treinador jogador = new Jogador();
+        batalha.listaNPC();
+
+
+
+
+
     }
 
 }

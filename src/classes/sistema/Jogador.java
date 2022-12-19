@@ -16,23 +16,23 @@ public class Jogador extends Treinador {
 
     public Jogador() {
         escolheNome();
-        escolhePolemonsIniciais();
+        escolhePokemonsIniciais();
     }
 
-    private void escolhePolemonsIniciais() {
+    private void escolhePokemonsIniciais() {
         System.out.printf("Bem vindo %s!\n" +
                 "Você é o(a) mais novo(a) treinador(a) pokemon da região, parabéns!\n" +
                 "Para começar sua jornada, você está recebendo 3 pokemons iniciais. Nomeie cada um deles.\n", this.getName());
-        input.nextLine();
+        //input.nextLine();
 
-        System.out.println("Escolha o nome do seu Charmander: ");
+        System.out.println("\nEscolha o nome do seu Charmander: ");
         this.getPokemons().add(new Charmander(validaNome()));
         System.out.println("Escolha o nome do seu Bulbassaur: ");
         this.getPokemons().add(new Bulbassaur(validaNome()));
         System.out.println("Escolha o nome do seu Squirtle: ");
         this.getPokemons().add(new Squirtle(validaNome()));
 
-        System.out.println("Agora você já possui seus 3 pokemons iniciais. Boa sorte nas batalhas.");
+        System.out.println("\nAgora você já possui seus 3 pokemons iniciais. Boa sorte nas batalhas.\n");
 //        input.nextLine();
     }
 

@@ -1,5 +1,6 @@
 package classes.sistema;
 
+import classes.abstracts.Pokemon;
 import classes.abstracts.Treinador;
 import classes.pokemons.*;
 
@@ -40,4 +41,10 @@ public class Batalha {
             System.out.println(npcList.get(i).getName());
         }
     }
+
+    public NPC getNPC(Integer index){
+        return (NPC) npcList.get(index);
+    }
+
+
 }

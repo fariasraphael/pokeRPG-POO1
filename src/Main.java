@@ -11,14 +11,8 @@ import classes.sistema.Statics;
 public class Main {
     public static void main(String[] args) {
         Statics.inicializaStatics();
-        Batalha batalha = new Batalha();
 
         Treinador jogador = new Jogador();
-        batalha.listaNPC();
-
-
-
-
 
     }
 

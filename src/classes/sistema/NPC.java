@@ -3,6 +3,8 @@ package classes.sistema;
 import classes.abstracts.Pokemon;
 import classes.abstracts.Treinador;
 
+import java.util.Random;
+
 public class NPC extends Treinador {
 
     public NPC(String name) {
@@ -11,7 +13,8 @@ public class NPC extends Treinador {
 
     @Override
     public Pokemon escolherPokemon() {
-        return null;
+        int indexPokemon = new Random().nextInt(2);
+        return getPokemons().get(indexPokemon);
     }
 
     @Override

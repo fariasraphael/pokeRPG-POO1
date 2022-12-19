@@ -60,7 +60,34 @@ public class Jogador extends Treinador {
 
     @Override
     public Pokemon escolherPokemon() {
-        return null;
+        if (this.getPokemons().isEmpty()){
+            System.out.println("Jogador não possui Pokemons.");
+            return null;
+        }
+
+        System.out.println("Escolha um dos seus pokemons para iniciar a batalha:");
+        for (int i=0;i<this.getPokemons().size();i++){
+            System.out.printf("%d - %s\n",i,this.getPokemons().get(i).getNome());
+        }
+
+        int indexPokemon = -1;
+        while (indexPokemon == -1) {
+            System.out.print("Seleção: ");
+            String resposta = input.nextLine();
+            try {
+                indexPokemon = Integer.valueOf(resposta);
+                if (indexPokemon < 0 || indexPokemon > getPokemons().size()) {
+                    System.out.println("Resposta inválida!");
+                    indexPokemon = -1;
+                }
+            } catch (Exception e){}
+
+        }
+            System.out.printf("%s escolhido",getPokemons().get(indexPokemon).getNome());
+            return getPokemons().get(indexPokemon);
+
+
+
     }
 
     @Override
@@ -138,6 +165,28 @@ public class Jogador extends Treinador {
         }
 
         input.close();
+        return pokemon.ataca(pokemon.getGolpes()[indexGolpe], pokemonInimigo);
+    }
+
+    public int escolherGolpe(Pokemon pokemon, Pokemon pokemonInimigo) {
+        for (int i = 0; i < pokemon.getGolpes().length; i++) {
+            Golpe golpe = pokemon.getGolpes()[i];
+            System.out.printf("%d - Golpe: %s | Dano: %d | Tipo: %s | Usos: %d\n", i, golpe.getNome(), golpe.getDano(), golpe.getTipo().getNome(), golpe.getUsos());
+        }
+
+        int indexGolpe = -1;
+        while (indexGolpe == -1) {
+            System.out.print("Seleção: ");
+            String resposta = input.nextLine();
+            try {
+                indexGolpe = Integer.valueOf(resposta);
+                if (indexGolpe < 0 || indexGolpe > 3) {
+                    System.out.println("Resposta inválida!");
+                    indexGolpe = -1;
+                }
+            } catch (Exception e){}
+        }
+
         return pokemon.ataca(pokemon.getGolpes()[indexGolpe], pokemonInimigo);
     }
 

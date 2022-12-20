@@ -172,7 +172,8 @@ public class Jogador extends Treinador {
         System.out.println("\n");
         for (int i = 0; i < pokemon.getGolpes().length; i++) {
             Golpe golpe = pokemon.getGolpes()[i];
-            System.out.printf("%d - Golpe: %s | Dano: %d | Tipo: %s | Usos: %d\n", i, golpe.getNome(), golpe.getDano(), golpe.getTipo().getNome(), golpe.getUsos());
+            System.out.printf("%d - Golpe: %s | Dano: %d | Tipo: %s \n", i, golpe.getNome(), golpe.getDano(), golpe.getTipo().getNome());
+            //System.out.printf("%d - Golpe: %s | Dano: %d | Tipo: %s | Usos: %d\n", i, golpe.getNome(), golpe.getDano(), golpe.getTipo().getNome(), golpe.getUsos());
         }
 
         int indexGolpe = -1;

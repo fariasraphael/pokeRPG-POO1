@@ -31,7 +31,8 @@ public class NPC extends Treinador {
 
     public int escolherGolpe(Pokemon pokemon, Pokemon pokemonInimigo) {
         int indexGolpe = new Random().nextInt(3);
-        System.out.printf("\nGolpe inimigo = %s, dano = %d\n",pokemon.getGolpes()[indexGolpe].getNome(),pokemon.getGolpes()[indexGolpe].getDano());
+
+        System.out.printf("Golpe: %s ",pokemon.getGolpes()[indexGolpe].getNome());
         return pokemon.ataca(pokemon.getGolpes()[indexGolpe], pokemonInimigo);
     }
 

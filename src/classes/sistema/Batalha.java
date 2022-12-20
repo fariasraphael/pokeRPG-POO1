@@ -40,6 +40,7 @@ public class Batalha {
         for (int i=0;i<npcList.size();i++) {
             System.out.println(npcList.get(i).getName());
         }
+        System.out.println();
     }
 
     public NPC getNPC(Integer index){

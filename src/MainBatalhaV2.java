@@ -5,6 +5,8 @@ import classes.sistema.Jogador;
 import classes.sistema.NPC;
 import classes.sistema.Statics;
 
+import java.util.Random;
+
 public class MainBatalhaV2 {
     public static void main(String[] args) {
         Statics.inicializaStatics();
@@ -23,34 +25,50 @@ public class MainBatalhaV2 {
         int jogar = 0;
         boolean turnoJogador = true;
 
-        while (jogar < 2) {
+        while (jogar < 10) {
             System.out.printf("\nVida do seu Pokemon = %d", pokemonJogador.getVida());
-            System.out.printf("\nVida Pokemon inimigo = %d\n", pokemonNPC.getVida());
+            System.out.printf("\nVida Pokemon inimigo = %d\n\n", pokemonNPC.getVida());
 
             if (turnoJogador) {
-                int dano = jogador.escolherGolpe(pokemonJogador, pokemonNPC);
-                pokemonNPC.setVida(pokemonNPC.getVida() - dano);
+                System.out.println("###= Escolha um golpe para atacar =###");
+                int danoCalculado = jogador.escolherGolpe(pokemonJogador, pokemonNPC);
+                int taxaAcerto = new Random().nextInt(100);
+                //System.out.printf(" Dano calculado: %d",danoCalculado);
+                System.out.print(" Taxa de acerto: "+taxaAcerto+"%");
+
+                double taxaAcertoPercente = taxaAcerto/100D;
+                int danoFinal = (int) (danoCalculado * taxaAcerto/100D);
+                pokemonNPC.setVida(pokemonNPC.getVida() - danoFinal);
+                System.out.printf(" Dano final: %d\n",danoFinal);
             } else {
-                System.out.println("\nInimigo ataca:");
-                int dano = npc.escolherGolpe(pokemonNPC, pokemonJogador);
-                System.out.println(dano);
-                pokemonJogador.setVida(pokemonJogador.getVida() - dano);
+                System.out.println("\n=== Inimigo ataca ===");
+                int danoCalculado = npc.escolherGolpe(pokemonNPC, pokemonJogador);
+                int taxaAcerto = 30 + new Random().nextInt(70);
+                //System.out.printf(" Dano calculado: %d",danoCalculado);
+                System.out.print(" Taxa de acerto: "+taxaAcerto+"%");
+
+                double taxaAcertoPercente = taxaAcerto/100D;
+                int danoFinal = (int) (danoCalculado * taxaAcerto/100D);
+
+                pokemonJogador.setVida(pokemonJogador.getVida() - danoFinal);
+                System.out.printf(" Dano final: %d\n",danoFinal);
+
             }
 
-            if (pokemonJogador.getVida() < 0) {
+            if (pokemonJogador.getVida() <= 0) {
                 pokemonJogador.setVida(0);
                 System.out.println("Seu pokemon morreu, escolha outro pokemon");
                 pokemonJogador = jogador.escolherPokemon();
             }
 
-            if (pokemonNPC.getVida() < 0) {
+            if (pokemonNPC.getVida() <= 0) {
                 pokemonNPC.setVida(0);
                 System.out.println("Vc matou o pokemon inimigo");
                 pokemonNPC = npc.escolherPokemon();
             }
 
             turnoJogador = !turnoJogador;
-            jogar++;
+            jogar--;
         }
 
         ////

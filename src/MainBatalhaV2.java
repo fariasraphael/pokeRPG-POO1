@@ -1,3 +1,4 @@
+import classes.Itens.PedraDeEvolucao;
 import classes.Itens.Revive;
 import classes.abstracts.Pokemon;
 import classes.abstracts.Treinador;
@@ -37,7 +38,7 @@ public class MainBatalhaV2 {
             if (turnoJogador) {
                 System.out.println("###= Escolha um golpe para atacar =###");
                 int danoCalculado = jogador.escolherGolpe(pokemonJogador, pokemonNPC);
-                int taxaAcerto = 30 + new Random().nextInt(70);
+                int taxaAcerto = new Random().nextInt(70);
                 //System.out.printf(" Dano calculado: %d",danoCalculado);
                 System.out.print(" Taxa de acerto: " + taxaAcerto + "%");
 
@@ -48,7 +49,7 @@ public class MainBatalhaV2 {
             } else {
                 System.out.println("\n=== Inimigo ataca ===");
                 int danoCalculado = npc.escolherGolpe(pokemonNPC, pokemonJogador);
-                int taxaAcerto = new Random().nextInt(70);
+                int taxaAcerto = 30 + new Random().nextInt(70);
                 //System.out.printf(" Dano calculado: %d",danoCalculado);
                 System.out.print(" Taxa de acerto: " + taxaAcerto + "%");
 
@@ -87,9 +88,17 @@ public class MainBatalhaV2 {
                     System.out.println(" ===== Parabéns vc GANHOU ====");
                     continuar = false;
                 } else if (indexPokemonNPC == 3) {
+                    System.out.printf("\n--- Vc ganhou de %s ---\n",npc.getName());
                     indexNPC++;
+
                     npc = batalha.getNPC(indexNPC);
+                    System.out.printf("\nNovo inimigo -> %s\n",npc.getName());
                     indexPokemonNPC = 0;
+
+                    //
+                    System.out.printf("\nPokemon %s evoluído\n",pokemonJogador.getNome());
+                    pokemonJogador = new PedraDeEvolucao().usarItem(pokemonJogador);
+
 
                 }
 

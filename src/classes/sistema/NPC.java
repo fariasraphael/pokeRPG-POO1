@@ -19,6 +19,11 @@ public class NPC extends Treinador {
         return getPokemons().get(indexPokemon);
     }
 
+    public Pokemon escolherPokemon(int indexPokemon) {
+        //int indexPokemon = new Random().nextInt(2);
+        return getPokemons().get(indexPokemon);
+    }
+
     @Override
     protected void escolherItem() {
 

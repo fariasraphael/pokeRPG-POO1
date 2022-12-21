@@ -12,7 +12,7 @@ public class Chikorita extends Pokemon {
         super(nome, Statics.getELEMENTO("grama"), (700 + (new Random().nextInt(300))));
         Golpe[] golpes = {
                 Statics.getGOLPE("tackle"),
-                Statics.getGOLPE("solarBeam"),
+                Statics.getGOLPE("bulletSeed"),
                 Statics.getGOLPE("vineWhip"),
                 Statics.getGOLPE("leafBlade"),
         };

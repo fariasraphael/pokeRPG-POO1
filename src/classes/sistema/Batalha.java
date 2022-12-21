@@ -38,7 +38,12 @@ public class Batalha {
     public void listaNPC(){
         System.out.println("Seus adversários são:");
         for (int i=0;i<npcList.size();i++) {
-            System.out.println(npcList.get(i).getName());
+            System.out.printf("%s - (%s, %s, %s)\n",
+                    npcList.get(i).getName(),
+                    npcList.get(i).getPokemons().get(0).getNome(),
+                    npcList.get(i).getPokemons().get(1).getNome(),
+                    npcList.get(i).getPokemons().get(2).getNome());
+
         }
         System.out.println();
     }

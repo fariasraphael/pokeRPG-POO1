@@ -66,9 +66,15 @@ public class Jogador extends Treinador {
         }
 
         System.out.println("Escolha um dos seus pokemons para iniciar a batalha:");
+        boolean control = false;
         for (int i=0;i<this.getPokemons().size();i++){
-            System.out.printf("%d - %s\n",i,this.getPokemons().get(i).getNome());
+            if(this.getPokemons().get(i).getVida()>0){
+                control = true;
+                System.out.printf("%d - %s\n",i,this.getPokemons().get(i).getNome());
+            }
         }
+
+        if(!control){return null;}
 
         int indexPokemon = -1;
         while (indexPokemon == -1) {
@@ -85,8 +91,6 @@ public class Jogador extends Treinador {
         }
             System.out.printf("%s escolhido\n",getPokemons().get(indexPokemon).getNome());
             return getPokemons().get(indexPokemon);
-
-
 
     }
 

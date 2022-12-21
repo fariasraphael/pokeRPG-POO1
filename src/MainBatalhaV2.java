@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class MainBatalhaV2 {
     public static void main(String[] args) {
+
         Statics.inicializaStatics();
         Batalha batalha = new Batalha();
 
@@ -38,7 +39,7 @@ public class MainBatalhaV2 {
             if (turnoJogador) {
                 System.out.println("###= Escolha um golpe para atacar =###");
                 int danoCalculado = jogador.escolherGolpe(pokemonJogador, pokemonNPC);
-                int taxaAcerto = new Random().nextInt(70);
+                int taxaAcerto = 50 + new Random().nextInt(50);
                 //System.out.printf(" Dano calculado: %d",danoCalculado);
                 System.out.print(" Taxa de acerto: " + taxaAcerto + "%");
 
@@ -49,7 +50,7 @@ public class MainBatalhaV2 {
             } else {
                 System.out.println("\n=== Inimigo ataca ===");
                 int danoCalculado = npc.escolherGolpe(pokemonNPC, pokemonJogador);
-                int taxaAcerto = 30 + new Random().nextInt(70);
+                int taxaAcerto = 50 + new Random().nextInt(50);
                 //System.out.printf(" Dano calculado: %d",danoCalculado);
                 System.out.print(" Taxa de acerto: " + taxaAcerto + "%");
 
@@ -62,6 +63,7 @@ public class MainBatalhaV2 {
             }
 
             if (pokemonJogador.getVida() <= 0) {
+                pokemonJogador.setVida(0);
                 System.out.println();
                 System.out.println("--- Seu pokemon morreu :(");
                 if (!pokemonJogador.isReviveu()) {
@@ -96,6 +98,7 @@ public class MainBatalhaV2 {
                     indexPokemonNPC = 0;
 
                     //
+                    pokemonJogador.setVida(0);
                     System.out.printf("\nPokemon %s evoluído\n",pokemonJogador.getNome());
                     pokemonJogador = new PedraDeEvolucao().usarItem(pokemonJogador);
 

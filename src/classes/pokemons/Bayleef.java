@@ -15,10 +15,10 @@ public class Bayleef extends Chikorita {
 
     private Golpe[] upgradeGolpes(){
         Golpe[] golpes = {
-                Statics.getGOLPE("growl"),
-                Statics.getGOLPE("fireFang"),
-                Statics.getGOLPE("ember"),
-                Statics.getGOLPE("flameThrower"),
+                Statics.getGOLPE("razorLeaf"),
+                Statics.getGOLPE("vineWhip"),
+                Statics.getGOLPE("bulletSeed"),
+                Statics.getGOLPE("leafBlade"),
         };
 
         golpes[0].setDano(100 + new Random().nextInt(70));
